@@ -21,7 +21,8 @@
             <input id="email" type="text" placeholder="Your Email*" style="margin-bottom: 15px; width: 100%;"><br>
             <input id="password" type="text" placeholder="Choose Password*"
                 style="margin-bottom: 15px; width: 100%;"><br>
-            <input type="submit" style="border-radius: 5px; width: 100%; background-color: lightcoral; color: white;">
+            <input type="submit" style="border-radius: 5px; width: 100%; background-color: lightcoral; color: white;"
+            onclick="showMessage()">
         </div>
     </form>
 
@@ -31,7 +32,11 @@
             alert("Welcome to Home Page");
         });
 
-        
+        function showMessage(){
+            alert("your form has been submitted");
+        }
+
+
 
         function checkValidation() {
             let email = document.getElementById("email").value.trim();
@@ -51,6 +56,15 @@
             if (!checkValidation()) {
                 event.preventDefault();
             }
+        });
+
+
+        document.getElementById("email").addEventListener("focus", function(event){
+            document.getElementById("email").style.backgroundColor = "lightblue";
+        });
+
+        document.getElementById("email").addEventListener("blur", function(event){
+            document.getElementById("email").style.backgroundColor = "";
         });
     </script>
 </body>
