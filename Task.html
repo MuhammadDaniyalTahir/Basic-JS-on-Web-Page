@@ -10,40 +10,43 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Document</title>
 
-    
-    <script type="text/javascript">
-        function checkValidation(){
-            let email = document.getElementById("email").value.trim();
-            let password = document.getElementById("password").value.trim();
-
-            if(email == "" || password == ""){
-                alert("Please fill all fields");
-                return false;
-            }
-            return true;
-        }
-
-        const form = document.getElementById("ConactForm");
-        form.addEventListener("submit", function(event){
-            if(!checkValidation()){
-                event.preventDefault();
-            }
-        });
-    </script>
 </head>
 
 <body>
     <form style="background-color: #000000a3; width: fit-content; padding: 30px; margin: auto;" id="ConactForm">
-            <div class="Data">
-                <h3 style="color: white;">CONTACT US NOW</h3>
-                <p>lorem ipsum lorem ipsum lorem</p>
-                <hr>
-                <input id="email" type="text" placeholder="Your Email*" style="margin-bottom: 15px; width: 100%;"><br>
-                <input id="password" type="text" placeholder="Choose Password*" style="margin-bottom: 15px; width: 100%;"><br>
-                <input type="submit" value="GET A QUOTE"
-                    style="border-radius: 5px; width: 100%; background-color: lightcoral; color: white;">
-            </div>
-        </form>
+        <div class="Data">
+            <h3 style="color: white;">CONTACT US NOW</h3>
+            <p>lorem ipsum lorem ipsum lorem</p>
+            <hr>
+            <input id="email" type="text" placeholder="Your Email*" style="margin-bottom: 15px; width: 100%;"><br>
+            <input id="password" type="text" placeholder="Choose Password*"
+                style="margin-bottom: 15px; width: 100%;"><br>
+            <input type="submit" style="border-radius: 5px; width: 100%; background-color: lightcoral; color: white;">
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        function checkValidation() {
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            if (email === "" || password === "") {
+                alert("Please fill all fields");
+                console.log("came in");
+                return false;
+            }
+
+            return true;
+        }
+
+
+        const f = document.getElementById("ConactForm");
+        f.addEventListener("submit", function (event) {
+            if (!checkValidation()) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 
 </html>
