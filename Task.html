@@ -26,13 +26,19 @@
     </form>
 
     <script type="text/javascript">
+
+        document.addEventListener("DOMContentLoaded", function(event){
+            alert("Welcome to Home Page");
+        });
+
+        
+
         function checkValidation() {
             let email = document.getElementById("email").value.trim();
             let password = document.getElementById("password").value.trim();
 
-            if (email === "" || password === "") {
+            if (email == "" || password == "") {
                 alert("Please fill all fields");
-                console.log("came in");
                 return false;
             }
 
