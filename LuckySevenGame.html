@@ -9,14 +9,13 @@
 
     <script type="text/javascript">
         document.getElementById("btn").addEventListener("click", function (event) {
-            alert("in funciton");
             let num1 = Math.floor(Math.random() * 10);
             let num2 = Math.floor(Math.random() * 10);
             let num3 = Math.floor(Math.random() * 10);
             document.getElementById("I1").value = num1;
             document.getElementById("I2").value = num2;
             document.getElementById("I3").value = num3;
-            if(num1 == num2 && num2 == num3){
+            if(num1 == 7 && num1 == num2 && num2 == num3){
                 alert("You won the game");
             }
         });
