@@ -2,10 +2,14 @@
 <html>
 
 <body>
-    <input type="text" id="I1">
-    <input type="text" id="I2">
-    <input type="text" id="I3">
-    <input id="btn" type="button" value="sprint">
+    <div style="width: fit-content; margin: auto; margin-top: 5%; border-style: solid;padding: 20px;">
+        <input type="text" id="I1" style="width: 50px; aspect-ratio: 1/1; font-size: 18px;">
+        <input type="text" id="I2" style="width: 50px; aspect-ratio: 1/1; font-size: 18px;">
+        <input type="text" id="I3" style="width: 50px; aspect-ratio: 1/1; font-size: 18px;">
+        <br>
+        <input id="btn" type="button" value="sprint" style="margin-left: 63px; margin-top: 20px;">
+        
+    </div>
 
     <script type="text/javascript">
         document.getElementById("btn").addEventListener("click", function (event) {
@@ -15,7 +19,7 @@
             document.getElementById("I1").value = num1;
             document.getElementById("I2").value = num2;
             document.getElementById("I3").value = num3;
-            if(num1 == 7 && num1 == num2 && num2 == num3){
+            if (num1 == 7 && num1 == num2 && num2 == num3) {
                 alert("You won the game");
             }
         });
